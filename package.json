@@ -1,6 +1,6 @@
 {
   "name": "graph-dsa",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Graph DataStructure and Algorithms",
   "main": "dist/cjs/index.js",
   "module": "dist/index.js",
