@@ -1,0 +1,51 @@
+{
+  "name": "graph-dsa",
+  "version": "0.0.0",
+  "description": "Graph DataStructure and Algorithms",
+  "main": "dist/cjs/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "npx rimraf dist",
+    "prettier": "npx prettier --check --ignore-unknown ./**/*",
+    "eslint": "npx eslint ./ --no-error-on-unmatched-pattern",
+    "tsc": "npx tsc",
+    "tsc-cjs": "npx tsc --project tsconfig.cjs.json",
+    "build": "npm run prettier && npm run eslint && npm run clean && npm run tsc && npm run tsc-cjs",
+    "pretest": "npm run build",
+    "test": "npx jest",
+    "postversion": "git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@https://github.com/sodaru/graph-dsa.git"
+  },
+  "author": "Raghavendra K R<raghavendra@sodaru.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://https://github.com/sodaru/graph-dsa/issues"
+  },
+  "homepage": "https://https://github.com/sodaru/graph-dsa#readme",
+  "devDependencies": {
+    "@types/jest": "^27.5.1",
+    "eslint-config-sodaru": "^1.0.0",
+    "jest": "^28.1.0",
+    "prettier-config-sodaru": "^1.0.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "28.0.2",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.5"
+  },
+  "peerDependencies": {
+    "tslib": "^2.3.1"
+  },
+  "prettier": "prettier-config-sodaru",
+  "eslintConfig": {
+    "extends": [
+      "sodaru"
+    ]
+  }
+}
